@@ -1,5 +1,6 @@
 from django.db import models
 
+
 # Create your models here.
 
 
@@ -15,21 +16,22 @@ class Habilidade(models.Model):
         max_length=255
     )
 
+
 class Heroi(models.Model):
     nome = models.CharField(
         max_length=255
     )
     idade = models.IntegerField(
-        max_length=255
+
     )
     universo = models.CharField(
         max_length=255
     )
+
     habilidade = models.ManyToManyField(Habilidade)
 
-    categoria_heroi = models.CharField(
+
+class Categoria(models.Model):
+    Categotia_heroi = models.CharField(
         max_length=255
     )
-
-
-

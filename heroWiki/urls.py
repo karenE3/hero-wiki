@@ -17,12 +17,13 @@ from django.contrib import admin
 from django.urls import path, include
 from rest_framework import routers
 
-from herois.views import HeroiViewSet, HabilidadeViewSet, UniversoViewSets
+from herois.views import HeroiViewSet, HabilidadeViewSet, UniversoViewSets, CategoriaViewSets
 
 router = routers.DefaultRouter()
 router.register(r'universos', UniversoViewSets)
 router.register(r'habilidade', HabilidadeViewSet)
 router.register(r'heroi', HeroiViewSet)
+router.register(r'categoria', CategoriaViewSets)
 
 
 urlpatterns = [
